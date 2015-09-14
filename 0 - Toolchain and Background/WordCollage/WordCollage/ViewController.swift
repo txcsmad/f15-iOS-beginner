@@ -7,7 +7,7 @@ This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAl
 
 import UIKit
 
-class ViewController{
+class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
