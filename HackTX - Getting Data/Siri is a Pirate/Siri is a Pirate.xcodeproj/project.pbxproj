@@ -1,0 +1,294 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D4937B3B1BB07C0400FA66BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4937B3A1BB07C0400FA66BF /* AppDelegate.swift */; };
+		D4937B3D1BB07C0400FA66BF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4937B3C1BB07C0400FA66BF /* ViewController.swift */; };
+		D4937B401BB07C0400FA66BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4937B3E1BB07C0400FA66BF /* Main.storyboard */; };
+		D4937B421BB07C0400FA66BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4937B411BB07C0400FA66BF /* Assets.xcassets */; };
+		D4937B451BB07C0400FA66BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4937B431BB07C0400FA66BF /* LaunchScreen.storyboard */; };
+		D4937B4D1BB07CB500FA66BF /* PirateSpeakService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4937B4C1BB07CB500FA66BF /* PirateSpeakService.swift */; settings = {ASSET_TAGS = (); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D4937B371BB07C0400FA66BF /* Siri is a Pirate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Siri is a Pirate.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4937B3A1BB07C0400FA66BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D4937B3C1BB07C0400FA66BF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D4937B3F1BB07C0400FA66BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D4937B411BB07C0400FA66BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D4937B441BB07C0400FA66BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D4937B461BB07C0400FA66BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4937B4C1BB07CB500FA66BF /* PirateSpeakService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PirateSpeakService.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D4937B341BB07C0400FA66BF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D4937B2E1BB07C0400FA66BF = {
+			isa = PBXGroup;
+			children = (
+				D4937B391BB07C0400FA66BF /* Siri is a Pirate */,
+				D4937B381BB07C0400FA66BF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D4937B381BB07C0400FA66BF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D4937B371BB07C0400FA66BF /* Siri is a Pirate.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D4937B391BB07C0400FA66BF /* Siri is a Pirate */ = {
+			isa = PBXGroup;
+			children = (
+				D4937B3A1BB07C0400FA66BF /* AppDelegate.swift */,
+				D4937B3C1BB07C0400FA66BF /* ViewController.swift */,
+				D4937B3E1BB07C0400FA66BF /* Main.storyboard */,
+				D4937B411BB07C0400FA66BF /* Assets.xcassets */,
+				D4937B431BB07C0400FA66BF /* LaunchScreen.storyboard */,
+				D4937B461BB07C0400FA66BF /* Info.plist */,
+				D4937B4C1BB07CB500FA66BF /* PirateSpeakService.swift */,
+			);
+			path = "Siri is a Pirate";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D4937B361BB07C0400FA66BF /* Siri is a Pirate */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D4937B491BB07C0400FA66BF /* Build configuration list for PBXNativeTarget "Siri is a Pirate" */;
+			buildPhases = (
+				D4937B331BB07C0400FA66BF /* Sources */,
+				D4937B341BB07C0400FA66BF /* Frameworks */,
+				D4937B351BB07C0400FA66BF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Siri is a Pirate";
+			productName = "Siri is a Pirate";
+			productReference = D4937B371BB07C0400FA66BF /* Siri is a Pirate.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D4937B2F1BB07C0400FA66BF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Nick Walker";
+				TargetAttributes = {
+					D4937B361BB07C0400FA66BF = {
+						CreatedOnToolsVersion = 7.0;
+					};
+				};
+			};
+			buildConfigurationList = D4937B321BB07C0400FA66BF /* Build configuration list for PBXProject "Siri is a Pirate" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D4937B2E1BB07C0400FA66BF;
+			productRefGroup = D4937B381BB07C0400FA66BF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D4937B361BB07C0400FA66BF /* Siri is a Pirate */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D4937B351BB07C0400FA66BF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4937B451BB07C0400FA66BF /* LaunchScreen.storyboard in Resources */,
+				D4937B421BB07C0400FA66BF /* Assets.xcassets in Resources */,
+				D4937B401BB07C0400FA66BF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D4937B331BB07C0400FA66BF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4937B3D1BB07C0400FA66BF /* ViewController.swift in Sources */,
+				D4937B3B1BB07C0400FA66BF /* AppDelegate.swift in Sources */,
+				D4937B4D1BB07CB500FA66BF /* PirateSpeakService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D4937B3E1BB07C0400FA66BF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D4937B3F1BB07C0400FA66BF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D4937B431BB07C0400FA66BF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D4937B441BB07C0400FA66BF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D4937B471BB07C0400FA66BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D4937B481BB07C0400FA66BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D4937B4A1BB07C0400FA66BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Siri is a Pirate/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "us.nickwalker.Siri-is-a-Pirate";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D4937B4B1BB07C0400FA66BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Siri is a Pirate/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "us.nickwalker.Siri-is-a-Pirate";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D4937B321BB07C0400FA66BF /* Build configuration list for PBXProject "Siri is a Pirate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4937B471BB07C0400FA66BF /* Debug */,
+				D4937B481BB07C0400FA66BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D4937B491BB07C0400FA66BF /* Build configuration list for PBXNativeTarget "Siri is a Pirate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4937B4A1BB07C0400FA66BF /* Debug */,
+				D4937B4B1BB07C0400FA66BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D4937B2F1BB07C0400FA66BF /* Project object */;
+}
