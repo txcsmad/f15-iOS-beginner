@@ -4,18 +4,18 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var extralabel: UILabel!
+    @IBOutlet weak var coolLabel: UILabel!
 
     @IBAction func makeLabelRed(sender: UIButton) {
-        extraordinaryLabel.textColor = UIColor.redColor()
+        coolLabel.textColor = UIColor.redColor()
     }
     @IBAction func makeLabelGreen (sender: UIButton) {
-
+        coolLabel.textColor = UIColor.greenColor()
     }
 
     @IBAction func makeLabelPurple(sender: AnyObject) {
-        extraordinaryLabel.textColor = UIColor
-
+        coolLabel.textColor = UIColor.purpleColor()
+    }
 }
 
 

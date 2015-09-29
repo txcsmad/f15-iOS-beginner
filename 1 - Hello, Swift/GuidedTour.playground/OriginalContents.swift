@@ -1,7 +1,7 @@
 //: ## A Swift Tour
 //: Tradition suggests that the first program in a new language should print the words “Hello, world!” on the screen. In Swift, this can be done in a single line:
 
-print("Hello, world!")
+println("Hello, world!")
 //: This line of code is a complete program. You don’t need to import a separate library for functionality like input/output or string handling. You also don’t need to write semicolons at the end of every statement.
 //: This tour gives you enough information to start writing code in Swift by showing you how to accomplish a variety of programming tasks. Don’t worry if you don’t understand something—everything introduced in this tour is explained in detail in the rest of [this book](https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/GuidedTour.html).
 //: If you would like to modify the markup, see this [reference](https://developer.apple.com/library/ios/documentation/Swift/Reference/Playground_Ref/Chapters/MarkupReference.html) for guidance.
@@ -71,13 +71,13 @@ for score in individualScores {
         teamScore += 1
     }
 }
-print(teamScore)
+println(teamScore)
 
 //:  In an `if` statement, the conditional must be a Boolean expression—this means that code such as `if score { ... }` is an error, not an implicit comparison to zero.
 //: You can use `if` and `let` together to work with values that might be missing. These values are represented as optionals. An optional value either contains a value or contains `nil` to indicate that a value is missing. Write a question mark (`?`) after the type of a value to mark the value as optional.
 
 var optionalString: String? = "Hello"
-print(optionalString == nil)
+println(optionalString == nil)
  
 var optionalName: String? = "John Appleseed"
 var greeting = "Hello!"
@@ -121,7 +121,7 @@ for (kind, numbers) in interestingNumbers {
         }
     }
 }
-print(largest)
+println(largest)
 
 //: *EXPERIMENT:* Add another variable to keep track of which kind of number was the largest, as well as what that largest number was.
 
@@ -131,13 +131,13 @@ var n = 2
 while n < 100 {
     n = n * 2
 }
-print(n)
+println(n)
  
 var m = 2
-repeat {
+do {
     m = m * 2
 } while m < 100
-print(m)
+println(m)
 
 
 //: You can keep an index in a loop—either by using `..<` to make a range of indexes or by writing an explicit initialization, condition, and increment. These two loops do the same thing:
@@ -145,13 +145,13 @@ var firstForLoop = 0
 for i in 0..<4 {
     firstForLoop += i
 }
-print(firstForLoop)
+println(firstForLoop)
  
 var secondForLoop = 0
 for var i = 0; i < 4; ++i {
     secondForLoop += i
 }
-print(secondForLoop)
+println(secondForLoop)
 
 //: Use `..<` to make a range that omits its upper value, and use `...` to make a range that includes both values
 
@@ -160,7 +160,7 @@ print(secondForLoop)
 func greet(name: String, day: String) -> String {
     return "Hello \(name), today is \(day)."
 }
-greet("Bob", day: "Tuesday")
+greet("Bob", "Tuesday")
 
 //: *EXPERIMENT:* Remove the day parameter. Add a parameter to include today’s lunch special in the greeting.
 
@@ -182,8 +182,8 @@ func calculateStatistics(scores: [Int]) -> (min: Int, max: Int, sum: Int) {
     return (min, max, sum)
 }
 let statistics = calculateStatistics([5, 3, 100, 3, 9])
-print(statistics.sum)
-print(statistics.2)
+println(statistics.sum)
+println(statistics.2)
 
 //: Functions can also take a variable number of arguments, collecting them into an array.
 func sumOf(numbers: Int...) -> Int {
@@ -233,7 +233,7 @@ func lessThanTen(number: Int) -> Bool {
     return number < 10
 }
 var numbers = [20, 19, 7, 12]
-hasAnyMatches(numbers, condition: lessThanTen)
+hasAnyMatches(numbers, lessThanTen)
 
 //: Functions are actually a special case of closures: blocks of code that can be called later. The code in a closure has access to things like variables and functions that were available in the scope where the closure was created, even if the closure is in a different scope when it is executed—you saw an example of this already with nested functions. You can write a closure without a name by surrounding code with braces (`{}`). Use `in` to separate the arguments and return type from the body.
 numbers.map({
@@ -246,12 +246,12 @@ numbers.map({
 
 //: You have several options for writing closures more concisely. When a closure’s type is already known, such as the callback for a delegate, you can omit the type of its parameters, its return type, or both. Single statement closures implicitly return the value of their only statement.
 let mappedNumbers = numbers.map({ number in 3 * number })
-print(mappedNumbers)
+println(mappedNumbers)
 
 
 //: You can refer to parameters by number instead of by name—this approach is especially useful in very short closures. A closure passed as the last argument to a function can appear immediately after the parentheses.
-let sortedNumbers = numbers.sort( { $0 > $1 })
-print(sortedNumbers)
+let sortedNumbers = sorted(numbers) { $0 > $1 }
+println(sortedNumbers)
 
 
 
@@ -339,9 +339,9 @@ class EquilateralTriangle: NamedShape {
     }
 }
 var triangle = EquilateralTriangle(sideLength: 3.1, name: "a triangle")
-print(triangle.perimeter)
+println(triangle.perimeter)
 triangle.perimeter = 9.9
-print(triangle.sideLength)
+println(triangle.sideLength)
 
 
 //: In the setter for `perimeter`, the new value has the implicit name `newValue`. You can provide an explicit name in parentheses after `set`.
@@ -369,10 +369,10 @@ class TriangleAndSquare {
     }
 }
 var triangleAndSquare = TriangleAndSquare(size: 10, name: "another test shape")
-print(triangleAndSquare.square.sideLength)
-print(triangleAndSquare.triangle.sideLength)
+println(triangleAndSquare.square.sideLength)
+println(triangleAndSquare.triangle.sideLength)
 triangleAndSquare.square = Square(sideLength: 50, name: "larger square")
-print(triangleAndSquare.triangle.sideLength)
+println(triangleAndSquare.triangle.sideLength)
 
 //: Methods on classes have one important difference from functions. Parameter names in functions are used only within the function, but parameters names in methods are also used when you call the method (except for the first parameter). By default, a method has the same name for its parameters when you call it and within the method itself. You can specify a second name, which is used inside the method.
 class Counter {
@@ -522,13 +522,13 @@ extension Int: ExampleProtocol {
         self += 42
     }
 }
-print(7.simpleDescription)
+println(7.simpleDescription)
 
 //: *EXPERIMENT:* Write an extension for the Double type that adds an absoluteValue property.
 
 //: You can use a protocol name just like any other named type—for example, to create a collection of objects that have different types but that all conform to a single protocol. When you work with values whose type is a protocol type, methods outside the protocol definition are not available.
 let protocolValue: ExampleProtocol = a
-print(protocolValue.simpleDescription)
+println(protocolValue.simpleDescription)
 // println(protocolValue.anotherProperty)  // Uncomment to see the error
 
 //: Even though the variable `protocolValue` has a runtime type of `SimpleClass`, the compiler treats it as the given type of `ExampleProtocol`. This means that you can’t accidentally access methods or properties that the class implements in addition to its protocol conformance.
@@ -536,14 +536,14 @@ print(protocolValue.simpleDescription)
 
 //: ### Generics
 //: Write a name inside angle brackets to make a generic function or type.
-func repeatItem<Item>(item: Item, times: Int) -> [Item] {
+func repeat<Item>(item: Item, times: Int) -> [Item] {
     var result = [Item]()
     for i in 0..<times {
         result.append(item)
     }
     return result
 }
-repeatItem("knock", times: 4)
+repeat("knock", 4)
 
 //: You can make generic forms of functions and methods, as well as classes, enumerations, and structures.
 enum OptionalValue<T> {
@@ -564,7 +564,7 @@ func anyCommonElements <T, U where T: SequenceType, U: SequenceType, T.Generator
     }
     return false
 }
-anyCommonElements([1, 2, 3], rhs: [3])
+anyCommonElements([1, 2, 3], [3])
 
 //: *EXPERIMENT:* Modify the anyCommonElements(_:_:) function to make a function that returns an array of the elements that any two sequences have in common.
 
