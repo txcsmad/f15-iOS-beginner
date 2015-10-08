@@ -8,11 +8,11 @@ October 6th, GDC 1.304, 7:00-8:30PM
 
 Model-View-Controller (MVC) is the design pattern to use when building iOS apps. 
 
-The **model** is how we ==represent data in our program== (And nothing more!). A well-written model is simple, and agnostic of the rest of the program.
+The **model** is how we represent data in our program (And nothing more!). A well-written model is simple, and agnostic of the rest of the program.
 
-The **view** is the part of our app that ==the user sees and interacts== with. So far, we have talked about the view layer in terms of Storyboards**. With storyboards, we can set up our view layer so that all the view elements we  In iOS, view elements are subclasses of `UIView`.
+The **view** is the part of our app that the user sees and interacts with. So far, we have talked about the view layer in terms of Storyboards**. With storyboards, we can set up our view layer so that all the view elements we  In iOS, view elements are subclasses of `UIView`.
 
-The **controller** is the meat and potatoes of our app. It ==interprets changes in the **view** and the **model**, and interacts with them appropriately==.
+The **controller** is the meat and potatoes of our app. It interprets changes in the **view** and the **model**, and interacts with them appropriately.
 
 #### Groceries
 
