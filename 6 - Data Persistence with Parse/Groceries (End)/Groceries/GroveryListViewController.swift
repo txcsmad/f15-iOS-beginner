@@ -7,9 +7,7 @@ class GroceryListViewController: UITableViewController, CreateGroceryItemViewCon
     var items = [PFObject]()
     
     private func loadItems() {
-        // TODO: Query for items
         let query = PFQuery(className: "Item")
-        query.whereKey("quantity", greaterThan: 2)
         query.findObjectsInBackgroundWithBlock { (objects: [PFObject]?, error: NSError?) -> Void in
             if let results = objects {
                 self.items = results
