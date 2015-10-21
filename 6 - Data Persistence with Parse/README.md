@@ -1,4 +1,4 @@
-## 5 - Data Persistence with Parse
+## 6 - Data Persistence with Parse
 
 October 20th, GDC 1.304, 7:00PM - 8:30PM
 
