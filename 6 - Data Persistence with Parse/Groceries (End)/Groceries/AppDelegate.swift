@@ -8,8 +8,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     
-    let PARSE_APP_ID = "wEIWbhqxtDrsmWqxF8oEeJIEO7lsZnYpzjx9vXtb"
-    let PARSE_CLIENT_KEY = "bdNPcGyJ5LtMfAobxs2xPsDK8h7A0DgdzQg5BlUI"
+    let PARSE_APP_ID = ""
+    let PARSE_CLIENT_KEY = ""
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
