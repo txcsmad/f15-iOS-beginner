@@ -28,20 +28,15 @@ class StopwatchViewController: UIViewController, StopwatchDelegate, UITableViewD
         stopwatch.start()
     }
     
-    func stringFromTimeInterval(interval: NSTimeInterval) -> String {
-        let interval = NSInteger(interval)
-        let seconds = interval % 60
-        let minutes = (interval / 60) % 60
-        return String(format: "%0.2d:%0.2d", minutes, seconds)
-    }
+    
     
     func timePassed() {
         if let start = stopwatch.originalStart {
             let totalPassed = NSDate() - start
-            totalTimePassedLabel.text = stringFromTimeInterval(totalPassed)
+            totalTimePassedLabel.text = totalPassed.description
             
             let lastLapPassed = NSDate() - start.dateByAddingTimeInterval(stopwatch.allLaps())
-            timeSinceLastLapPassedLabel.text = stringFromTimeInterval(lastLapPassed)
+            timeSinceLastLapPassedLabel.text = lastLapPassed.description
         }
     }
     
@@ -59,7 +54,7 @@ class StopwatchViewController: UIViewController, StopwatchDelegate, UITableViewD
         let cell = tableView.dequeueReusableCellWithIdentifier("LapCell", forIndexPath: indexPath)
 
         cell.textLabel?.text = "Lap \(indexPath.row + 1)"
-        cell.detailTextLabel?.text = stringFromTimeInterval(stopwatch.laps[indexPath.row])
+        cell.detailTextLabel?.text = stopwatch.laps[indexPath.row].description
         
         return cell
     }

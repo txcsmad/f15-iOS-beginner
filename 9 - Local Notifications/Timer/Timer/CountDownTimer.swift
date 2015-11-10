@@ -2,20 +2,37 @@ import Foundation
 
 protocol CountDownTimerDelegate: class {
     func timePasssed()
+    func countDownDidEnd()
 }
 
 @objc class CountDownTimer: NSObject {
     var delegate: CountDownTimerDelegate?
-    private let minutes: Int
     private var timer: NSTimer?
     //TODO: Need to be able to create in the future
 
-    private(set) var timeRemaining: Int
+    private(set) var timeRemaining: NSTimeInterval
     private var started: NSDate?
 
-    init(minutes: Int){
-        self.minutes = minutes
-        self.timeRemaining = 60 * minutes
+    var projectedEndDate: NSDate? {
+        get{
+            if timer == nil {
+                return nil
+            } else {
+                // If the timer isn't nil, we must've started the timer
+                assert(started != nil)
+                return started! + timeRemaining
+            }
+        }
+    }
+
+    var running: Bool {
+        get{
+            return timer != nil
+        }
+    }
+
+    init(duration: NSTimeInterval){
+        self.timeRemaining = duration
     }
 
     func start(){
@@ -35,6 +52,7 @@ protocol CountDownTimerDelegate: class {
             let stoppedAt = NSDate()
             stop()
             print("Timer ran for exactly \(stoppedAt - started!) seconds")
+            delegate?.countDownDidEnd()
         }
     }
 }
