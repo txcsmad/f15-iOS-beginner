@@ -1,25 +1,36 @@
 //
 //  AppDelegate.swift
-//  Timer
+//  FlappyBird
 //
-//  Created by Nick Walker on 10/27/15.
-//  Copyright © 2015 Nick Walker. All rights reserved.
+//  Created by Jesse Tipton on 11/16/15.
+//  Copyright © 2015 MAD. All rights reserved.
 //
 
 import UIKit
+import SpriteKit
 
-@UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+extension SKColor {
+    static func flappyBirdSkyColor() -> SKColor {
+        let red: CGFloat = 113.0 / 255.0
+        let green: CGFloat = 197.0 / 255.0
+        let blue: CGFloat = 207.0 / 255.0
+        let alpha: CGFloat = 1.0
+        return SKColor(red: red, green: green, blue: blue, alpha: alpha)
+    }
+}
+
+extension CGRect {
+    var center: CGPoint {
+        return CGPointMake(CGRectGetMidX(self), CGRectGetMidY(self))
+    }
+}
+
+@UIApplicationMain class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        // TODO: Register for local notifications
-        let notificationSettings = UIUserNotificationSettings(forTypes: [.Alert, .Sound], categories: nil)
-
-        application.registerUserNotificationSettings(notificationSettings)
         return true
     }
 
@@ -44,17 +55,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-    func application(application: UIApplication, didReceiveLocalNotification notification: UILocalNotification) {
-        // TODO: do something cool here
-        let tabBarController = window?.rootViewController as! UITabBarController
-        let selectedIndex = tabBarController.selectedIndex
-        if selectedIndex == 0 {
-            print("User is already on the count timer screen")
-        } else {
-            print("User is not on the count timer screen")
-        }
-    }
-
 
 }
-

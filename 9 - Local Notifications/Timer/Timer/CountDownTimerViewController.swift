@@ -30,6 +30,14 @@ class CountDownTimerViewController: UIViewController, CountDownTimerDelegate {
         countDownTimer = nil
         startStop.setTitle("Start", forState: .Normal)
         timeSet.hidden = false
+
+
+        UIView.animateWithDuration(3.0, animations: { () -> Void in
+            self.timeLabel.layer.backgroundColor = UIColor.redColor().CGColor
+            }) { (_) -> Void in
+                print("Animation finished")
+                self.timeLabel.layer.backgroundColor = UIColor.clearColor().CGColor
+        }
     }
 
     @IBAction func stepperPressed(sender: UIStepper){
@@ -65,7 +73,14 @@ class CountDownTimerViewController: UIViewController, CountDownTimerDelegate {
             timeSet.hidden = true
 
             //TODO: Set up a notification!
+            let notification = UILocalNotification()
+            notification.fireDate = countDownTimer?.projectedEndDate
+            notification.alertTitle = "Timer is done"
+            notification.alertBody = "Jimmy dean breakfast bowl (tm) is warm"
+            notification.soundName = UILocalNotificationDefaultSoundName
 
+            UIApplication.sharedApplication().scheduleLocalNotification(notification)
+            
         }
 
     }
